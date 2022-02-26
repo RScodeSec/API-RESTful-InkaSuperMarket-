@@ -13,15 +13,15 @@ import java.util.ArrayList;
 @Service
 public class MarketUserDetail implements UserDetailsService {
 
-    @Value("${user.detail.username}")
-    private  String usernames;
+    //@Value("${user.detail.username}")
+    //private  String usernames;
 
-    @Value("${user.detail.password}")
-    private  String passwords;
+    //@Value("${user.detail.password}")
+    //private  String passwords;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        return new User(usernames, "{noop}"+passwords, new ArrayList<>());
+        return new User("admin", "{noop}inka", new ArrayList<>());
     }
 }
